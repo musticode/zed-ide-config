@@ -1,0 +1,92 @@
+{
+  "theme": "JetBrains Dark",
+  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "ui_font_family": ".SystemUIFont",
+  "ui_font_size": 16,
+  "buffer_font_family": "JetBrains Mono",
+  "buffer_font_size": 14.0,
+  "base_keymap": "JetBrains",
+
+  "project_panel": { "dock": "left" },
+  "outline_panel": { "dock": "left" },
+  "collaboration_panel": { "dock": "left" },
+  "git_panel": { "dock": "left" },
+  "minimap": { "show": "auto" },
+
+  "format_on_save": "on",
+  "auto_signature_help": true,
+  "show_completions_on_input": true,
+  "completion_trigger_characters": ["."],
+
+  "prettier": {
+    "allowed": true,
+    "singleQuote": true,
+    "useTabs": false,
+    "tabWidth": 2,
+    "semi": false,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "avoid",
+    "printWidth": 120,
+    "jsxSingleQuote": true
+  },
+
+  "languages": {
+    "TypeScript": {
+      "show_inlay_hints": true,
+      "language_servers": ["vtsls", "!typescript-language-server"]
+    },
+    "JavaScript": {
+      "show_inlay_hints": true,
+      "language_servers": ["vtsls", "!typescript-language-server"]
+    },
+    "TSX": {
+      "show_inlay_hints": true,
+      "language_servers": ["vtsls", "!typescript-language-server"]
+    }
+  },
+
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "suggest": {
+            "completeFunctionCalls": true,
+            "includeCompletionsForImportStatements": true,
+            "previewAutoImport": true
+          },
+          "inlayHints": {
+            "parameterNames": { "enabled": "all" },
+            "parameterTypes": { "enabled": true },
+            "variableTypes": { "enabled": true },
+            "propertyDeclarationTypes": { "enabled": true },
+            "functionLikeReturnTypes": { "enabled": true }
+          }
+        },
+        "javascript": {
+          "suggest": {
+            "completeFunctionCalls": true
+          },
+          "inlayHints": {
+            "parameterNames": { "enabled": "all" },
+            "parameterTypes": { "enabled": true }
+          }
+        },
+        "vtsls": {
+          "experimental": {
+            "completion": {
+              "enableServerSideFuzzyMatch": true
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  }
+}
